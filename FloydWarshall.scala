@@ -8,7 +8,7 @@ object main {
     // Копируем исходную матрицу смежности в матрицу расстояний
     val dist = Array.tabulate(n, n) { (i, j) =>
       val value = matrix(i)(j)
-      if (value == Int.MaxValue) 20000 else value
+      if (value == Int.MaxValue) Int.MaxValue/2 else value
     }
     // Алгоритм Флойда-Уоршелла
     for {
